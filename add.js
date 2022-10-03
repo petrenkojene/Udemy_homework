@@ -23,31 +23,17 @@
 //     target.style.backgroundColor = "green";
 //   }
 // });
-function sayHello(text) {
-  return `Hello, ${text}`;
-}
-sayHello("Anton");
-function returnNeighboringNumbers(number) {
-  let arr = [];
-  arr[0] = number - 1;
-  arr[1] = number;
-  arr[2] = number + 1;
-  console.log(arr);
-}
-returnNeighboringNumbers(5);
-function getMathResult(a, b) {
-  let result = "";
-  if (typeof b !== "number" || b <= 0) {
-    console.log(a);
+function calculateVolumeAndArea(item) {
+  if (
+    typeof item !== "number" ||
+    item <= 0 ||
+    Number.isInteger(item) == false
+  ) {
+    console.log("При вычислении произошла ошибка");
+  } else {
+    let sqr = 6 * item * item;
+    let volume = item * item * item;
+    console.log(`Объем куба: ${sqr}, площадь всей поверхности: ${volume}`);
   }
-  for (let i = 1; i <= b; i++) {
-    if (i === b) {
-      result += `${a * i}`;
-    } else {
-      result += `${a * i}---`;
-    }
-  }
-
-  console.log(result);
 }
-getMathResult(3, 5);
+calculateVolumeAndArea(0.2);
