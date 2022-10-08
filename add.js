@@ -72,16 +72,28 @@
 //   }
 // }
 // getTimeFromMinutes(150);
-function maxNumber(a, b, c, d) {
-  if (
-    typeof a !== "number" ||
-    typeof b !== "number" ||
-    typeof c !== "number" ||
-    typeof d !== "number"
-  ) {
-    return 0;
-  } else {
-    return Math.max(a, b, c, d);
-  }
-}
-maxNumber(3, 6, 9, 7);
+// function maxNumber(a, b, c, d) {
+//   if (
+//     typeof a !== "number" ||
+//     typeof b !== "number" ||
+//     typeof c !== "number" ||
+//     typeof d !== "number"
+//   ) {
+//     return 0;
+//   } else {
+//     return Math.max(a, b, c, d);
+//   }
+// }
+// maxNumber(3, 6, 9, 7);
+let arr = {
+  a: 2,
+  b: 4,
+  c: {
+    x: 2,
+    y: 34,
+  },
+};
+const newArr = { ...arr };
+newArr.c.x = 15;
+console.log(arr);
+console.log(newArr);
