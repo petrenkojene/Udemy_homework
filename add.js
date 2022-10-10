@@ -23,10 +23,13 @@
 //     target.style.backgroundColor = "green";
 //   }
 // });
-
-const str = [2, 35, 43, 1, 24, 6];
-
-console.log(str.sort(sortMumber));
-function sortMumber(a, b) {
-  return b - a;
-}
+document.querySelectorAll("button").forEach((e) => {
+  e.style.backgroundColor = "red";
+});
+document.querySelector(".container").style.display = "flex";
+document.querySelector(".container").style.justifyContent = "center";
+let div = document.createElement("div");
+div.classList.add("rembo");
+div.innerHTML = "lorem";
+document.querySelector(".container").prepend(div);
+div.insertAdjacentHTML("beforebegin", "<div><p>bulya</p></div>");
